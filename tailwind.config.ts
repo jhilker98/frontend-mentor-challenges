@@ -17,7 +17,10 @@ export default {
           // ...
         },
       },
-      themes: [require("./src/styles/advice-generator.config.ts")],
+      themes: [
+        require("./src/styles/advice-generator.config"),
+        require("./src/styles/stats-card.config"),
+      ],
     }),
   ],
 } satisfies Config;
