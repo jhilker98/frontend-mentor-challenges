@@ -13,5 +13,7 @@ const { title, description } = Astro.props;
   <head>
     <SiteSEO title={title} description={description} />
   </head>
-  <slot />
+  <body>
+    <slot />
+  </body>
 </html>

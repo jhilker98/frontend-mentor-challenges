@@ -37,6 +37,9 @@ export default {
             fontFamily: {
               sans: ['"Manrope"', ...defaultTheme.fontFamily.sans],
             },
+            fontSize: {
+              28: "28px",
+            },
           },
         },
       ],
