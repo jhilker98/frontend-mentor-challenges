@@ -5,6 +5,7 @@ import type { PluginAPI } from "tailwindcss/types/config";
 
 export default {
   name: "advice-generator",
+  selectors: [".advice-generator", "[data-theme='advice-generator']"],
   screens: {
     mobile: "375px",
     desktop: "1440px",
