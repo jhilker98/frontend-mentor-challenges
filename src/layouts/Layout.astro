@@ -1,0 +1,17 @@
+---
+import SiteSEO from "~/components/SiteSEO.astro";
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html>
+  <head>
+    <SiteSEO title={title} description={description} />
+    <slot />
+  </head>
+</html>
