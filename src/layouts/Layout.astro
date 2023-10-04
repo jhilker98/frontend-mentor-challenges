@@ -3,9 +3,10 @@ import SiteSEO from "~/components/SiteSEO.astro";
 interface Props {
   title: string;
   description: string;
+  theme: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, theme } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,7 +14,7 @@ const { title, description } = Astro.props;
   <head>
     <SiteSEO title={title} description={description} />
   </head>
-  <body>
+  <body data-theme={theme}>
     <slot />
   </body>
 </html>
