@@ -14,7 +14,7 @@ export default {
   extend: {
     screens: {
       //mobile: "375px",
-      desktop: "376px",
+      desktop: "1440px",
     },
     colors: {
       veryDarkBlue: "hsl(233, 47%, 7%)",
