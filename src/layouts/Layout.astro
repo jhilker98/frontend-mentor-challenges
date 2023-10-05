@@ -10,11 +10,35 @@ const { title, description, project } = Astro.props;
 ---
 
 <!doctype html>
-<html>
+<html
+  lang="en"
+  x-data="{darkMode: false}"
+  x-init="darkMode = JSON.parse(localStorage.getItem('darkMode')); $watch('darkMode', value => JSON.stringify(localStorage.setItem('darkMode', value)))"
+  :data-theme="darkMode === true ? 'dark' : 'light'">
   <head>
     <SiteSEO title={title} description={description} />
+    <script is:inline>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.dataset.theme = "dark";
+      } else {
+        document.documentElement.dataset.theme = "light";
+      }
+
+      // Whenever the user explicitly chooses light mode
+      localStorage.theme = "light";
+
+      // Whenever the user explicitly chooses dark mode
+      localStorage.theme = "dark";
+
+      // Whenever the user explicitly chooses to respect the OS preference
+      localStorage.removeItem("theme");
+    </script>
   </head>
-  <body :data-project={project}>
+  <body class="min-h-screen" :data-project={project}>
     <slot />
   </body>
 </html>
