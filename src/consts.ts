@@ -1,5 +1,12 @@
 import { type Link, type SocialLink, type SiteConfig } from "~/types";
 
+export const NAV_LINKS: Link[] = [
+  {
+    name: "Home",
+    href: "/",
+  },
+];
+
 const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "socials/fa6-brands/gitlab",

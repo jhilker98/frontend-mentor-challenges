@@ -17,6 +17,7 @@
     "@types/alpinejs": "^3.13.2",
     "alpinejs": "^3.13.1",
     "astro": "^3.2.2",
+    "astro-icon": "https://gitpkg.now.sh/stramel/astro-icon/packages/core?main",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
