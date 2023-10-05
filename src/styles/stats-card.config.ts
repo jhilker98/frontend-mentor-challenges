@@ -7,8 +7,8 @@ export default {
   name: "stats-card-component",
   selectors: [
     ".stats-card-component",
-    "[data-theme='stats-card-component']",
-    "[\\:data-theme='stats-card-component']",
+    "[data-project='stats-card-component']",
+    "[\\:data-project='stats-card-component']",
   ],
   content: [],
   extend: {

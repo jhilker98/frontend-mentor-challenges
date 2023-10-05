@@ -8,8 +8,8 @@ export default {
   content: [],
   selectors: [
     ".advice-generator",
-    "[data-theme='advice-generator']",
-    "[\\:data-theme='advice-generator']",
+    "[data-project='advice-generator']",
+    "[\\:data-project='advice-generator']",
   ],
   screens: {
     mobile: "375px",
