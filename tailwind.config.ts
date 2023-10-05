@@ -6,9 +6,7 @@ import type { PluginAPI } from "tailwindcss/types/config";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: ["class", "[data-theme='dark']"],
-  theme: {
-    extend: {},
-  },
+
   plugins: [
     require("@tailwindcss/typography"),
     require("tailwindcss-themer")({
@@ -18,7 +16,6 @@ export default {
             sans: ['"IBM Plex Sans"', ...defaultTheme.fontFamily.sans],
             serif: ['"IBM Plex Serif"', ...defaultTheme.fontFamily.serif],
           },
-
           colors: {
             branding: {
               black: "#091725",
@@ -128,7 +125,7 @@ export default {
               },
             },
           },
-          typography: (theme: PluginAPI["theme"]) => ({
+          typography: ({ theme }) => ({
             "branding-blue": {
               css: {
                 "--tw-prose-links": theme("colors.branding.blue[600]"),
