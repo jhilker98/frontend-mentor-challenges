@@ -23,9 +23,11 @@
     "@fontsource-variable/lexend-deca": "^5.0.8",
     "@fontsource/inter": "^5.0.12",
     "@fontsource/manrope": "^5.0.14",
+    "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.8.2",
     "astro-seo": "^0.8.0",
+    "tailwind-scrollbar": "^3.0.5",
     "tailwindcss-themer": "^3.1.2"
   }
 }

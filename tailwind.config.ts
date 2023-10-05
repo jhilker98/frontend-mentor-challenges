@@ -6,8 +6,19 @@ import type { PluginAPI } from "tailwindcss/types/config";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: ["class", "[data-theme='dark']"],
-
+  theme: {
+    gridTemplateAreas: {
+      mobile: ["header header header", "main main main", "main main main"],
+      desktop: [
+        "sidebar header header",
+        "sidebar main main",
+        "sidebar main main",
+      ],
+    },
+  },
   plugins: [
+    require("@savvywombat/tailwindcss-grid-areas"),
+    require("tailwind-scrollbar"),
     require("@tailwindcss/typography"),
     require("tailwindcss-themer")({
       defaultTheme: {
@@ -15,6 +26,12 @@ export default {
           fontFamily: {
             sans: ['"IBM Plex Sans"', ...defaultTheme.fontFamily.sans],
             serif: ['"IBM Plex Serif"', ...defaultTheme.fontFamily.serif],
+          },
+          gridTemplateColumns: {
+            layout: "0.7fr 2.3fr 1fr",
+          },
+          gridTemplateRows: {
+            layout: "0.2fr 2.6fr 0.2fr",
           },
           colors: {
             branding: {
