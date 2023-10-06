@@ -38,7 +38,10 @@ const { title, description, project } = Astro.props;
       localStorage.removeItem("theme");
     </script>
   </head>
-  <body class="min-h-screen" :data-project={project} x-data="{'sidebarOpen': false}">
+  <body
+    class="min-h-screen"
+    data-project={project}
+    x-data="{'sidebarOpen': false}">
     <slot />
   </body>
 </html>
