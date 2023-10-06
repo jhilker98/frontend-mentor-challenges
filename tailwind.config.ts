@@ -2,6 +2,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 import type { PluginAPI } from "tailwindcss/types/config";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -20,6 +21,13 @@ export default {
     require("@savvywombat/tailwindcss-grid-areas"),
     require("tailwind-scrollbar"),
     require("@tailwindcss/typography"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".text-wrap-balance": {
+          "text-wrap": "balance",
+        },
+      });
+    }),
     require("tailwindcss-themer")({
       defaultTheme: {
         extend: {
