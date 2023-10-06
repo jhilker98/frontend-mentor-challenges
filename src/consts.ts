@@ -33,6 +33,11 @@ const SOCIAL_LINKS: SocialLink[] = [
     name: "CodePen",
     href: "https://codepen.io/hilkerj/",
   },
+  {
+    icon: "heroicons/home-solid",
+    name: "Main site",
+    href: "https://jhilker.com",
+  },
 ];
 
 export const SITE_META: SiteConfig = {
