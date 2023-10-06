@@ -26,7 +26,8 @@ import imageHeaderDesktop from "~/assets/statsCard/image-header-desktop.jpg";
           Discover the benefits of data analytics and make better decisions
           regarding revenue, customer experience, and overall efficiency.
         </p>
-        <div class="flex flex-col lg:flex-row mt-4 space-y-4 lg:space-y-0">
+        <div
+          class="flex flex-col lg:flex-row mt-4 lg:mt-8 space-y-4 lg:space-y-0">
           <div class="basis-1/3">
             <p class="font-bold text-white font-inter text-xl">10k+</p>
             <span
@@ -50,7 +51,17 @@ import imageHeaderDesktop from "~/assets/statsCard/image-header-desktop.jpg";
           </div>
         </div>
       </div>
-      <div class="lg:w-1/2 bg-softPurple order-1 lg:order-2"></div>
+      <div class="lg:w-1/2 bg-softPurple order-1 lg:order-2">
+        <picture>
+          <source media="(min-width: 1024px)" src={imageHeaderDesktop.src} />
+          <source src={imageHeaderMobile.src} />
+          <img
+            src={imageHeaderMobile.src}
+            class="object-cover h-[18.5rem] lg:h-full w-full filter opacity-70 mix-blend-hard-light brightness-[0.35]"
+            alt="A group of women in a meeting."
+          />
+        </picture>
+      </div>
     </div>
   </main>
 </Layout>
