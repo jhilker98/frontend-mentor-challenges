@@ -3,7 +3,7 @@ import { type Link, type SocialLink, type SiteConfig } from "~/types";
 export const NAV_LINKS: Link[] = [
   {
     name: "Home",
-    href: "/",
+    href: "/frontend-mentor-challenges",
   },
 ];
 

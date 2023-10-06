@@ -5,7 +5,7 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jhilker.com/frontend-mentor-challenges",
+  base: "/frontend-mentor-challenges",
   outDir: "public",
   publicDir: "static",
   integrations: [tailwind(), alpinejs()]
