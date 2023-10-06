@@ -1,6 +1,10 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 import "@fontsource/manrope/800.css";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
+import patternDividerMobile from "~/assets/advice-generator/pattern-divider-mobile.svg";
+import patternDividerDesktop from "~/assets/advice-generator/pattern-divider-desktop.svg";
 ---
 
 <Layout
@@ -10,17 +14,29 @@ import "@fontsource/manrope/800.css";
   <main
     class="h-screen bg-dark-blue text-white font-extrabold grid place-items-center">
     <article
-      class="p-6 bg-grayish-blue-dark rounded font-extrabold font-sans"
+      class="p-8 bg-grayish-blue-dark rounded font-extrabold font-sans relative flex flex-col justify-between items-center max-w-md"
       x-data="adviceCard"
       x-init="getAdvice()"
       x-show="current !== null">
-      <header class="text-neon-green text-center text-sm">
-        Advice #<span x-text="current.id"></span>
+      <header class="text-neon-green text-center text-sm uppercase -mt-2">
+        <h1>Advice #<span x-text="current.id"></span></h1>
       </header>
       <blockquote
-        class="w-[45ch] text-center text-light-cyan m-3 text-[28px] before:content-['“'] after:content-[no-close-quote;]"
+        class="m-4 text-center text-light-cyan text-28 before:content-[open-quote;] after:content-[close-quote;] text-wrap-balance"
         x-text="current.advice">
       </blockquote>
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset={patternDividerDesktop.src}
+        />
+        <Image src={patternDividerMobile} alt="A divider" class="my-5" />
+      </picture>
+      <button
+        class="bg-neon-green p-2.5 self-center rounded-full absolute justify-self-end -bottom-5 hover:shadow-md hover:shadow-neon-green/50 duration-100"
+        x-on:click="getAdvice()">
+        <Icon name="projects/advice-generator/icon-dice" class="h-5 w-5" />
+      </button>
     </article>
   </main>
 
