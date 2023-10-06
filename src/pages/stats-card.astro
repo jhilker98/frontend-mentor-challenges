@@ -4,26 +4,47 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/700.css";
 import { Image } from "astro:assets";
 import imageHeaderMobile from "~/assets/statsCard/image-header-mobile.jpg";
+import imageHeaderDesktop from "~/assets/statsCard/image-header-desktop.jpg";
 ---
 
 <Layout
   title="Stats Card Component"
   description="The stats card component challenge from frontendmentor.io"
   project="stats-card-component">
-  <main class="bg-veryDarkBlue h-screen grid place-items-center">
+  <main class="bg-veryDarkBlue h-screen grid place-items-center lg:p-16">
     <article
-      class="bg-desaturatedBlue flex flex-col lg:flex-row container text-white">
-      <!-- <div class="p-8 lg:w-1/2 flex-shrink-0 order-2 lg:order-1">
+      class="bg-desaturatedBlue flex flex-col container text-white max-w-[375px] lg:max-w-[1440px] lg:flex-row rounded">
+      <div class="lg:w-1/2 p-8 order-2 text-center lg:text-left">
+        <h1
+          class="font-inter text-3xl lg:text-5xl font-bold leading-normal lg:leading-snug"
+          style="text-wrap: balance;">
+          Get
+          <span class="text-softPurple">insights</span>
+           that help your business grow.
+        </h1>
+        <p
+          class="text-white/75 mt-4 lg:mt-16 font-lexendDeca font-normal text-base leading-loose lg:max-w-prose">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <!-- <div class="p-8 lg:w-1/2 flex-shrink-0 order-2 lg:order-1">
         <h1>Get insights that will help your team grow.</h1>
       </div> -->
-      <div class="lg:w-1/2 flex-shrink-0 order-1 lg:order-2 bg-softPurple">
+      </div>
+      <div
+        class="order-1 lg:order-2 lg:w-1/2 flex-shrink-0 bg-softPurple lg:rounded-r rounded-t lg:rounded-tl-none">
         <Image
           src={imageHeaderMobile}
           format="webp"
           alt="A group of women in a meeting."
-          class="object-cover filter mix-blend-hard-light brightness-50"
+          class="object-cover w-full filter mix-blend-hard-light brightness-50 block lg:hidden"
         />
-        <!-- <Image src="http://via.placeholder.com/640" alt="placeholder" width="640" height="640" class="filter object-cover bg-softPurple mix-blend-overlay"/> -->
+        <Image
+          src={imageHeaderDesktop}
+          format="webp"
+          alt="A group of women in a meeting."
+          class="object-cover w-full filter mix-blend-hard-light brightness-50 hidden lg:block rounded-r"
+        />
       </div>
     </article>
   </main>
