@@ -1,0 +1,42 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import "@fontsource/manrope/800.css";
+---
+
+<Layout
+  title="Advice Generator App"
+  description="The advice generator app challenge from frontendmentor.io"
+  project="advice-generator">
+  <main
+    class="h-screen bg-dark-blue text-white font-extrabold grid place-items-center">
+    <article
+      class="p-6 bg-grayish-blue-dark rounded font-extrabold font-sans"
+      x-data="adviceCard"
+      x-init="getAdvice()"
+      x-show="current !== null">
+      <header class="text-neon-green text-center text-sm">
+        Advice #<span x-text="current.id"></span>
+      </header>
+      <blockquote
+        class="w-[45ch] text-center text-light-cyan m-3 text-[28px] before:content-['“'] after:content-[no-close-quote;]"
+        x-text="current.advice">
+      </blockquote>
+    </article>
+  </main>
+
+  <script is:inline>
+    const adviceCard = () => {
+      return {
+        current: null,
+        getAdvice: async function () {
+          const response = await fetch("https://api.adviceslip.com/advice", {
+            cache: "no-store",
+          });
+          const data = await response.json();
+          this.current = data.slip;
+          console.log(data);
+        },
+      };
+    };
+  </script>
+</Layout>
