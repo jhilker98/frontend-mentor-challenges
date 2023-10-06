@@ -6,6 +6,7 @@ import { type SocialLink } from "~/types";
 import "@fontsource/ibm-plex-sans/400.css";
 import "@fontsource/ibm-plex-sans/600.css";
 import sidebar from "~/assets/sidebar.svg";
+const currentDate = new Date();
 ---
 
 <aside
@@ -53,7 +54,14 @@ import sidebar from "~/assets/sidebar.svg";
       </div>
     )
   }
-  <p class="absolute bottom-4 before:content-['©'] text-sm">
-    {`2021 - ${new Date().getFullYear()} ${SITE_META.author}`}
+  <p class="absolute bottom-4 before:content-['©'] text-sm before:mr-1">
+    {
+      currentDate.getFullYear() === 2023 &&
+        `${currentDate.getFullYear()} ${SITE_META.author}`
+    }
+    {
+      currentDate.getFullYear() !== 2023 &&
+        `2023 - ${currentDate.getFullYear()} ${SITE_META.author}`
+    }
   </p>
 </aside>

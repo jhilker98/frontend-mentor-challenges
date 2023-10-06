@@ -4,6 +4,8 @@ import type { SocialLink } from "~/types";
 import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
 import sidebar from "~/assets/sidebar.svg";
+import { date } from "astro/zod";
+const currentDate = new Date();
 ---
 
 <aside class="hidden lg:block bg-branding-navy text-white grid-in-sidebar">
@@ -37,8 +39,15 @@ import sidebar from "~/assets/sidebar.svg";
         </div>
       )
     }
-    <p class="absolute bottom-4 before:content-['©'] text-sm">
-      {`2023 - ${new Date().getFullYear()} ${SITE_META.author}`}
+    <p class="absolute bottom-4 before:content-['©'] before:mr-1 text-sm">
+      {
+        currentDate.getFullYear() === 2023 &&
+          `${currentDate.getFullYear()} ${SITE_META.author}`
+      }
+      {
+        currentDate.getFullYear() !== 2023 &&
+          `2023 - ${currentDate.getFullYear()} ${SITE_META.author}`
+      }
     </p>
   </div>
 </aside>
