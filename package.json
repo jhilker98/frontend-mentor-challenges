@@ -17,12 +17,14 @@
     "@types/alpinejs": "^3.13.2",
     "alpinejs": "^3.13.1",
     "astro": "^3.2.2",
+    "astro-icon": "https://gitpkg.now.sh/stramel/astro-icon/packages/core?main",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
     "@fontsource-variable/lexend-deca": "^5.0.8",
     "@fontsource/inter": "^5.0.12",
     "@fontsource/manrope": "^5.0.14",
+    "@iconify/json": "^2.2.124",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.8.2",
