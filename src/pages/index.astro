@@ -1,4 +1,5 @@
 ---
+import FixedSidebar from "~/components/index/FixedSidebar.astro";
 import Layout from "~/layouts/Layout.astro";
 ---
 
@@ -9,7 +10,7 @@ import Layout from "~/layouts/Layout.astro";
   <div
     class="h-screen grid grid-cols-layout grid-rows-layout grid-areas-mobile lg:grid-areas-desktop bg-branding-white dark:bg-branding-black">
     <header class="grid-in-header">Hello from header!</header>
-    <aside class="hidden lg:block grid-in-sidebar">Hello from sidebar.</aside>
+    <FixedSidebar />
     <main class="grid-in-main">Hello from Main!</main>
   </div>
 </Layout>
