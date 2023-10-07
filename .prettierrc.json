@@ -1,0 +1,15 @@
+{
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+  "tailwindConfig": "./tailwind.config.ts",
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "tabWidth": 2
+}
