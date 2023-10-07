@@ -163,6 +163,7 @@ export default {
       themes: [
         require("./src/styles/advice-generator.config"),
         require("./src/styles/stats-card.config"),
+        require("./src/styles/product-preview-card-component.config"),
       ],
     }),
   ],
