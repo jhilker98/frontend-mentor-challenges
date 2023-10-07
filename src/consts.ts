@@ -60,11 +60,13 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "My solution for the advice generator app challenge from frontendmentor.io.",
     url: "/advice-generator-app",
+    tools: ["Astro", "TailwindCSS"],
   },
   {
     name: "Stats card component",
     description:
       "My solution for the stats card component challenge from frontendmentor.io.",
     url: "/stats-card",
+    tools: ["Astro", "TailwindCSS"],
   },
 ];
