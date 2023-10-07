@@ -23,3 +23,9 @@ export interface SiteConfig {
   tagline: string;
   socialLinks?: SocialLink[];
 }
+
+export type Project = {
+  name: string;
+  description: string;
+  url: string;
+};

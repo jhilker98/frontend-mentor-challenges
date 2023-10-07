@@ -1,4 +1,9 @@
-import { type Link, type SocialLink, type SiteConfig } from "~/types";
+import {
+  type Link,
+  type SocialLink,
+  type SiteConfig,
+  type Project,
+} from "~/types";
 
 export const NAV_LINKS: Link[] = [
   {
@@ -48,3 +53,18 @@ export const SITE_META: SiteConfig = {
     "A front-end developer, who enjoys using Emacs, Hugo, Python, and Tailwind.",
   socialLinks: SOCIAL_LINKS,
 };
+
+export const FEATURED_PROJECTS: Project[] = [
+  {
+    name: "Advice Generator app",
+    description:
+      "My solution for the advice generator app challenge from frontendmentor.io.",
+    url: "/advice-generator-app",
+  },
+  {
+    name: "Stats card component",
+    description:
+      "My solution for the stats card component challenge from frontendmentor.io.",
+    url: "/stats-card",
+  },
+];
