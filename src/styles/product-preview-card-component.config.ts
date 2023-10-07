@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
-import type { PluginAPI } from "tailwindcss/types/config";
 
 export default {
   name: "product-preview-card-component",
@@ -12,10 +11,6 @@ export default {
   ],
   content: [],
   extend: {
-    fontWeight: {
-      DEFAULT: 500,
-      bold: 700,
-    },
     fontFamily: {
       serif: ['"Fraunces Variable"', ...defaultTheme.fontFamily.serif],
       sans: ['"Montserrat Variable"', ...defaultTheme.fontFamily.sans],

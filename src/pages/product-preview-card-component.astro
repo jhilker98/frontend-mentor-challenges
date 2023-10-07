@@ -12,12 +12,12 @@ import Icon from "astro-icon";
   title="Product Preview Card component"
   description="My attempt at the 'product preview card component' on frontendmentor.io."
   project="product-preview-card-component">
-  <main class="grid place-items-center h-screen bg-cream">
+  <main class="bg-cream grid h-screen place-items-center">
     <!-- TODO: Create the damn card -->
     <div
-      class="max-w-md font-serif font-bold bg-white shadow flex flex-col lg:flex-row rounded">
+      class="flex max-w-md flex-col overflow-hidden rounded bg-white font-serif font-bold shadow lg:max-w-xl lg:flex-row">
       <!-- hello world -->
-      <div class="lg:w-1/2 order-1">
+      <div class="order-1 lg:w-1/2">
         <picture>
           <source
             media="(min-width: 1024px)"
@@ -30,8 +30,19 @@ import Icon from "astro-icon";
           />
         </picture>
       </div>
-      <div class="lg:w-1/2 p-6 order-2">
-        <p class="font-sans text-darkGreyishBlue">Perfume</p>
+      <div class="order-2 p-6 lg:w-1/2">
+        <p
+          class="text-darkGrayishBlue font-sans text-sm font-light uppercase tracking-[0.3rem]">
+          Perfume
+        </p>
+        <h2
+          class="mt-4 font-serif text-4xl text-veryDarkBlue text-wrap-balance">
+          Gabrielle Essence Eau De Parfum
+        </h2>
+        <p class="text-darkGrayishBlue mt-8 max-w-prose font-sans lg:mt-12">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
       </div>
     </div>
   </main>
