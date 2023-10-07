@@ -8,6 +8,7 @@
       }
     }
   ],
+  "tailwindConfig": "./tailwind.config.ts",
   "bracketSameLine": true,
   "bracketSpacing": true,
   "tabWidth": 2
