@@ -18,7 +18,7 @@ export default {
     },
     fontFamily: {
       serif: ['"Fraunces Variable"', ...defaultTheme.fontFamily.serif],
-      sans: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
+      sans: ['"Montserrat Variable"', ...defaultTheme.fontFamily.sans],
     },
     fontSize: {
       DEFAULT: "14px",
