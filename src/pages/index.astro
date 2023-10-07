@@ -4,7 +4,8 @@ import Layout from "~/layouts/Layout.astro";
 import Header from "~/components/index/Header.astro";
 import MobileSidebar from "~/components/index/MobileSidebar.astro";
 import { SITE_META, FEATURED_PROJECTS } from "~/consts";
-import type Project from "~/types";
+import { type Project } from "~/types";
+import "@fontsource/ibm-plex-serif/500.css";
 ---
 
 <Layout
@@ -42,28 +43,32 @@ import type Project from "~/types";
           </div>
         </div>
       </section>
-      <section class="-m-4 grid md:grid-cols-2">
-        {
-          FEATURED_PROJECTS.map((project: Project) => (
-            <div class="p-4 col-span-1">
-              <div class="bg-gray-100 dark:bg-[#102840] shadow-md p-6 rounded-lg dark:shadow-branding-white/20">
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 dark:text-branding-white">
-                  {project.name}
-                </h2>
-                <div class="prose prose-neutral dark:prose-invert line-clamp-2 prose-sm md:prose-base">
-                  {project.description}
+      <section class="text-gray-600 body-font min-h-screen" x-ref="projects">
+        <div class="container px-5 mx-auto">
+          <div class:list={["-m-4", "grid", "md:grid-cols-2"]}>
+            {
+              FEATURED_PROJECTS.map((project: Project) => (
+                <div class="p-4 col-span-1">
+                  <div class="bg-gray-100 dark:bg-[#102840] shadow-md p-6 rounded-lg dark:shadow-branding-white/20">
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4 dark:text-branding-white">
+                      {project.name}
+                    </h2>
+                    <div class="prose prose-neutral dark:prose-invert line-clamp-2 prose-sm md:prose-base">
+                      {project.description}
+                    </div>
+                    <a
+                      href={project.url}
+                      class="mt-4 inline-block text-branding-blue-600 dark:text-branding-blue-400 hover:underline">
+                      View
+                    </a>
+                  </div>
                 </div>
-                <a
-                  href={project.url}
-                  class="mt-2 text-branding-blue-600 dark:text-branding-blue-400 hover:underline">
-                  View
-                </a>
-              </div>
-            </div>
-          ))
-        }
+              ))
+            }
+          </div>
+        </div>
       </section>
     </main>
+    <MobileSidebar />
   </div>
-  <MobileSidebar />
 </Layout>
