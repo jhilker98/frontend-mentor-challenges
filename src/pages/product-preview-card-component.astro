@@ -12,7 +12,7 @@ import Icon from "astro-icon";
   title="Product Preview Card component"
   description="My attempt at the 'product preview card component' on frontendmentor.io."
   project="product-preview-card-component">
-  <main class="bg-cream grid h-screen place-items-center">
+  <main class="grid h-screen place-items-center bg-cream">
     <!-- TODO: Create the damn card -->
     <div
       class="flex max-w-md flex-col overflow-hidden rounded bg-white font-serif font-bold shadow lg:max-w-xl lg:flex-row">
@@ -26,23 +26,40 @@ import Icon from "astro-icon";
           <Image
             src={imageProductMobile}
             alt="A bottle of the product lying on a table."
-            class="w-full object-cover"
+            class="h-full w-full object-cover"
           />
         </picture>
       </div>
       <div class="order-2 p-6 lg:w-1/2">
         <p
-          class="text-darkGrayishBlue font-sans text-sm font-light uppercase tracking-[0.3rem]">
+          class="font-sans text-sm font-light uppercase tracking-[0.3rem] text-darkGrayishBlue">
           Perfume
         </p>
         <h2
           class="mt-4 font-serif text-4xl text-veryDarkBlue text-wrap-balance">
           Gabrielle Essence Eau De Parfum
         </h2>
-        <p class="text-darkGrayishBlue mt-8 max-w-prose font-sans lg:mt-12">
+        <p class="mt-6 max-w-prose font-sans text-darkGrayishBlue">
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
+        <div class="mt-4 flex flex-row items-center">
+          <span class="inline-block font-serif text-3xl text-darkCyan">
+            $149.99
+          </span>
+          <span
+            class="ml-10 inline-block text-sm text-darkGrayishBlue line-through"
+            >$169.99</span
+          >
+        </div>
+        <button
+          class="mx-auto mt-6 flex w-full items-center justify-center rounded bg-darkCyan py-3 text-white transition lg:mt-8">
+          <Icon
+            name="projects/product-preview-card/icon-cart"
+            class="mr-2 h-4 w-4 fill-white"
+          />
+           Add to Cart
+        </button>
       </div>
     </div>
   </main>
