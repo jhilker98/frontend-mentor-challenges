@@ -21,9 +21,13 @@
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
+    "@fontsource-variable/fraunces": "^5.0.15",
     "@fontsource-variable/lexend-deca": "^5.0.8",
+    "@fontsource-variable/montserrat": "^5.0.13",
+    "@fontsource/fraunces": "^5.0.14",
     "@fontsource/inter": "^5.0.12",
     "@fontsource/manrope": "^5.0.14",
+    "@fontsource/montserrat": "^5.0.12",
     "@iconify/json": "^2.2.124",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@tailwindcss/typography": "^0.5.10",
