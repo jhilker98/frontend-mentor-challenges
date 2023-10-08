@@ -69,4 +69,11 @@ export const FEATURED_PROJECTS: Project[] = [
     url: "/stats-card",
     tools: ["Astro", "TailwindCSS"],
   },
+  {
+    name: "Product Preview card component",
+    description:
+      "My solution for the product preview card challenge from frontendmentor.io.",
+    url: "/product-preview-card-component",
+    tools: ["Astro", "TailwindCSS"],
+  },
 ];
